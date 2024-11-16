@@ -3,59 +3,62 @@ import React from "react";
 const Choose = () => {
   const services = [
     {
-      title: "BLUE PROTOCOL",
+      title: "DONATION",
       imgSrc:
-      "https://images.unsplash.com/photo-1511512578047-dfb367046420?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+        "https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg",
+      hoverImgSrc:
+        "https://ggayane.github.io/css-experiments/cards/force_mage-character.webp",
     },
     {
-      title: "THRONE AND LIBERTY",
+      title: "BARTERING",
       imgSrc:
-        "https://images.unsplash.com/photo-1511512578047-dfb367046420?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+        "https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg",
+      hoverImgSrc:
+        "https://ggayane.github.io/css-experiments/cards/force_mage-character.webp",
     },
     {
-      title: "CRIMSON DESERT",
+      title: "MARKETING",
       imgSrc:
-      "https://images.unsplash.com/photo-1511512578047-dfb367046420?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
-    },
-    {
-      title: "DOKEV",
-      imgSrc:
-      "https://images.unsplash.com/photo-1511512578047-dfb367046420?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+        "https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg",
+      hoverImgSrc:
+        "https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp",
     },
   ];
 
   return (
-    <div className="bg-black min-h-screen py-10">
-      {/* Title */}
-      <h1 className="text-white text-center text-4xl font-bold mb-10">
-        Choose your Services
-      </h1>
+    <div className="flex justify-center items-center w-full h-screen bg-[#191c29]">
+      <div className="text-center p-10">
+        <h1 className="text-3xl font-bold text-white mb-10">Choose your Service</h1>
+        <div className="flex justify-center gap-8 max-w-screen-lg mx-auto">
+          {services.map((service, index) => (
+            <a
+              key={index}
+              href="#"
+              className="relative flex flex-col items-center w-[calc(400px/1.2)] h-[400px] group"
+            >
+              {/* Card */}
+              <div className="absolute inset-0 transition-all duration-500 group-hover:transform group-hover:perspective-[900px] group-hover:translate-y-[-5%] group-hover:rotate-x-[25deg] group-hover:translate-z-0 group-hover:shadow-lg">
+                <img
+                  src={service.imgSrc}
+                  alt={service.title}
+                  className="w-full h-full object-cover transform scale-110 transition-transform duration-300 ease-in-out group-hover:scale-100"
+                />
+              </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="relative bg-gray-900 rounded-lg shadow-lg overflow-hidden group transform transition-transform duration-300 hover:scale-105"
-          >
-            {/* Image */}
-            <img
-              src={service.imgSrc}
-              alt={service.title}
-              className="w-full h-60 object-cover"
-            />
+              {/* Hover Image */}
+              <img
+                src={service.hoverImgSrc}
+                alt={`${service.title} Hover`}
+                className="absolute w-full opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-[-30%]"
+              />
 
-            {/* Title Overlay */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h2 className="text-white text-2xl font-bold mb-4">
+              {/* Title */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white opacity-0 bg-black bg-opacity-50 p-2 rounded-lg group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-opacity duration-300">
                 {service.title}
-              </h2>
-              <button className="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-600">
-                Visit Page
-              </button>
-            </div>
-          </div>
-        ))}
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );
