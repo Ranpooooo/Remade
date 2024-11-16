@@ -28,7 +28,7 @@ const Choose = () => {
     <div className="bg-black min-h-screen py-10">
       {/* Title */}
       <h1 className="text-white text-center text-4xl font-bold mb-10">
-        Choose your Service
+        Choose your Services
       </h1>
 
       {/* Cards */}
