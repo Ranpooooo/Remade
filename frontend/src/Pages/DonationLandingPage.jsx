@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../Components/Navbar";
 import deb from "../images/deblured-cutty-fox.jpg";
-const App = () => {
+const DonationLandingPage = () => {
   //Buttons
   const buttons = [
     { label: "Search", icon: "🔍" },
@@ -111,4 +111,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default DonationLandingPage;
