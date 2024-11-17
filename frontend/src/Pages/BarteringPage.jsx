@@ -1,21 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-const Choose = () => {
-  const navigate = useNavigate();
-
-  const clickDonation = () => {
-    navigate("/Donation");
-  };
-
-  const clickBartering = () => {
-    navigate("/Bartering");
-  };
-
-  const clickMarketing = () => {
-    navigate("/Marketing");
-  };
-
+const DonationLandingPage = () => {
   const services = [
     {
       title: "DONATION",
@@ -23,7 +8,6 @@ const Choose = () => {
         "https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg",
       hoverImgSrc:
         "https://ggayane.github.io/css-experiments/cards/force_mage-character.webp",
-      onClick: clickDonation,
     },
     {
       title: "BARTERING",
@@ -31,15 +15,6 @@ const Choose = () => {
         "https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg",
       hoverImgSrc:
         "https://ggayane.github.io/css-experiments/cards/force_mage-character.webp",
-      onClick: clickBartering,
-    },
-    {
-      title: "MARKETING",
-      imgSrc:
-        "https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg",
-      hoverImgSrc:
-        "https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp",
-      onClick: clickMarketing,
     },
   ];
 
@@ -53,8 +28,8 @@ const Choose = () => {
           {services.map((service, index) => (
             <a
               key={index}
-              onClick={service.onClick}
-              className="relative flex flex-col items-center w-[calc(400px/1.2)] h-[400px] group cursor-pointer"
+              href="#"
+              className="relative flex flex-col items-center w-[calc(400px/1.2)] h-[400px] group"
             >
               {/* Card */}
               <div className="absolute inset-0 transition-all duration-500 group-hover:transform group-hover:perspective-[900px] group-hover:translate-y-[-5%] group-hover:rotate-x-[25deg] group-hover:translate-z-0 group-hover:shadow-lg">
@@ -84,4 +59,4 @@ const Choose = () => {
   );
 };
 
-export default Choose;
+export default DonationLandingPage;
