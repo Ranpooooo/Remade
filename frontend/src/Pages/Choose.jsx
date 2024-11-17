@@ -20,17 +20,17 @@ const Choose = () => {
     {
       title: "DONATION",
       imgSrc:
-        "https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg",
+        "https://pikaso.cdnpk.net/private/production/1129127433/render..jpeg?token=exp=1758412800~hmac=5c7b59637a5485a30f1aec7342ce3bce718b8743dfabf21d25d0bef156501107",
       hoverImgSrc:
-        "https://ggayane.github.io/css-experiments/cards/force_mage-character.webp",
+        "https://s3.ezgif.com/tmp/ezgif-3-f4466dc9f1.webp",
       onClick: clickDonation,
     },
     {
       title: "BARTERING",
       imgSrc:
-        "https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg",
+        "https://s3.ezgif.com/tmp/ezgif-3-a5f83a6190.jpg",
       hoverImgSrc:
-        "https://ggayane.github.io/css-experiments/cards/force_mage-character.webp",
+        "https://s3.ezgif.com/tmp/ezgif-3-5edf44b8ed.png",
       onClick: clickBartering,
     },
     {

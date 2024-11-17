@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../Components/Navbar";
+import Footers from "../../Components/Footer";
 import deb from "../images/deblured-cutty-fox.jpg";
 const DonationLandingPage = () => {
   //Buttons
@@ -42,7 +43,7 @@ const DonationLandingPage = () => {
       {/* Popular Items */}
       <div className="px-8 py-20">
         <h2 className="text-2xl font-bold text-center mb-6">Popular Items</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* Household area */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Household</h3>
@@ -102,12 +103,14 @@ const DonationLandingPage = () => {
                 >
                   {decorate}
                 </li>
-              ))}
+              ))} 
             </ul>
           </div>
         </div>
       </div>
+      <Footers/>
     </div>
+   
   );
 };
 
