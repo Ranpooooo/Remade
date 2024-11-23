@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../../Components/Navbar";
-import Footers from "../../Components/Footer";
+import Navbar from "../Components/Navbar";
+import Footers from "../Components/Footer";
 import deb from "../images/deblured-cutty-fox.jpg";
 const DonationLandingPage = () => {
   //Buttons
@@ -8,7 +8,7 @@ const DonationLandingPage = () => {
     { label: "Search", icon: "🔍" },
     { label: "Item List", icon: "⚖️" },
     { label: "ChatAI", icon: "🤖" },
-    { label: "Analytic", icon: "📊" },
+
   ];
 
   return (
@@ -26,7 +26,7 @@ const DonationLandingPage = () => {
 
         {/* Buttons Section */}
         <div className="absolute inset-x-0 bottom-0 transform translate-y-1/2">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-6 py-4 max-w-xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-6 py-2 max-w-xl mx-auto">
             {buttons.map((button, index) => (
               <button
                 key={index}

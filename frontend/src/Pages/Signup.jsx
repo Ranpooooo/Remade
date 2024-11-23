@@ -1,7 +1,15 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+import Navbar from "../Components/Navbar";
 function Signup() {
+  const navigate = useNavigate(); // Initialize navigate function
+
+  const handleLoginClick = () => {
+    navigate("/login"); // Navigate to the login page
+  };
   return (
+    <>
+    <Navbar />
     <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
       <div className="w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-md">
         <div className="text-center mb-6">
@@ -41,14 +49,12 @@ function Signup() {
 
         <div className="mt-4 text-center">
           <p className="mt-2 text-sm">
-            Don't have an account?{" "}
-            <a href="#" className="text-blue-400 hover:underline">
-              Sign up
+            Already have an account?{" "}
+            <a  className="text-blue-400 hover:underline" onClick={handleLoginClick}>
+              Log In
             </a>
           </p>
-          <a href="#" className="text-blue-400 hover:underline text-sm">
-            Reset password?
-          </a>
+          
         </div>
 
         <button className="w-full mt-4 bg-gray-700 hover:bg-gray-600 p-2 rounded text-white font-semibold">
@@ -56,12 +62,13 @@ function Signup() {
         </button>
         <p className="mt-4 text-xs text-gray-500 text-center">
           By continuing, you agree to our{" "}
-          <a href="#" className="text-blue-400 hover:underline">
+          <a  className="text-blue-400 hover:underline">
             Terms of Use
           </a>
         </p>
       </div>
     </div>
+    </>
   );
 }
 
