@@ -2,18 +2,14 @@ import React from "react";
 
 const ItemCard = ({ item }) => {
   return (
-    <div className="flex flex-col items-center bg-white border rounded-lg shadow-md p-4">
+    <div className="bg-white rounded-lg shadow-lg p-4">
       <img
-        src={item.image}
-        alt={item.name}
-        className="w-24 h-24 rounded-full mb-4"
+        src={item.imageUrl || "https://via.placeholder.com/150"}
+        alt={item.itemName}
+        className="w-full h-40 object-cover rounded-lg mb-4"
       />
-      <h3 className="font-bold text-lg">{item.name}</h3>
-      <p className="text-gray-600 text-sm text-center">{item.description}</p>
-      <p className="text-gray-400 text-sm mt-2">Posted on: {item.postOn}</p>
-      <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-        View Details
-      </button>
+      <h2 className="text-xl font-bold mb-2">{item.itemName}</h2>
+      <p className="text-gray-600">{item.itemDescription}</p>
     </div>
   );
 };
